@@ -1,0 +1,102 @@
+# Calc
+
+This folder contains calculation-related modules and functions for the JSPTH library.
+
+## Base calculator
+Functions:
+1. Add
+2. Subtract
+3. Multiply
+4. Divide
+5. Power
+6. sqrt
+7. Power
+8. Factorial
+9. Percentage
+
+## Advanced calculator 
+Functions:
+1. modulo
+2. floor_divide
+3. absolute
+4. logarithm
+5. logarithm_user_arg
+6. sine
+7. cosine
+8. tangent
+9. random_number
+10. root
+11. exponential
+12. permutation
+13. combination
+14. hyperbolic_sine
+15. hyperbolic_cosine
+16. hyperbolic_tangent
+17. sineh_inverse
+18. cosineh_inverse
+19. tangenth_inverse
+20. pythagorean_theorem
+21. viniette_formula
+22. golden_ratio
+23. silver_ratio
+24. bronze_ratio
+25. mean
+26. median
+27. mode
+28. cosine_law
+29. sine_law
+30. herons_formula
+31. circle_area
+32. sphere_volume
+33. cylinder_volume
+34. cone_volume
+35. trapezoid_area
+36. ellipse_area
+37. square_area
+38. rectangle_area
+39. triangle_area
+40. circle_radius
+41. sphere_surface_area
+42. cylinder_surface_area
+43. cone_surface_area
+44. trapezoid_perimeter
+45. ellipse_circumference
+46. fibonacci
+47. circle_circumference
+48. quadratic_formula
+49. distance_between_points
+50. midpoint
+51. julian_date
+52. prime_factors
+53. lcm
+54. hcf
+55. gcd
+56. product_of_list
+57. sum_of_squares
+58. product_of_squares
+59. base64_encode
+60. base64_decode
+61. harmonic_mean
+62. geometric_mean
+63. quadratic_mean
+64. cubic_mean
+65. weighted_mean
+66. root_mean_square
+67. pythagorean_triple 
+
+## Expressions
+1. Expression
+2. cubicExpression
+3. quadraticExpression
+
+## Figures
+1. areaOfFigures
+2. volumeOfFigures
+3. areaOf3DFigures
+4. perimeterOfFigures
+5. perimeterOf3DFigures
+6. diagonalOfFigures
+7. angleOfFigures
+8. angel_of_3d_figures
+9. volumeOf3DFigures
+
