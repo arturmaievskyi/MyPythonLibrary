@@ -9,6 +9,14 @@ class Color:
     MAGENTA = "\033[35m"
     CYAN = "\033[36m"
     WHITE = "\033[37m"
+    AQUAMARINE = "\033[36m"
+    AQUA = "\033[36m"
+    BLACK = "\033[30m"
+    BROWN = "\033[33m"
+    ORANGE = "\033[33m"
+    PURPLE = "\033[35m"
+    PINK = "\033[35m"
+    
 
     @staticmethod
     def color_text(text, color):

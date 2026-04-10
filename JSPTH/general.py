@@ -90,3 +90,11 @@ def initialize(*cls):
     """Initialize multiple classes"""
     __init__ = cls
     return __init__
+
+def system_info():
+    """Prints system information."""
+    print(f"Platform: {sys.platform}")
+    print(f"Python Version: {sys.version}")
+    print(f"Executable: {sys.executable}")
+    print(f"Current Working Directory: {os.getcwd()}")
+
