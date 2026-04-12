@@ -2,30 +2,33 @@ import os
 import sys
 
 class Console:
-    def log(message):
+    def __init__(self):
+        pass
+
+    def log(self, message):
         print(message)
 
-    def print(massage):
+    def print(self, massage):
         print(massage)
 
-    def input(prompt):
+    def input(self, prompt):
         return input(prompt)
     
-    def convert_toINT(value):
+    def convert_toINT(self, value):
         try:
             return int(value)
         except ValueError:
             Console.log("Conversion to INT failed.")
             return None
         
-    def convert_toFLOAT(value):
+    def convert_toFLOAT(self, value):
         try:
             return float(value)
         except ValueError:
             Console.log("Conversion to FLOAT failed.")
             return None
         
-    def convert_toSTRING(value):
+    def convert_toSTRING(self, value):
         try:
             return str(value)
         except ValueError:
@@ -42,7 +45,7 @@ class Console:
     def clear():
         os.system('cls' if os.name == 'nt' else 'clear')
 
-    def convert_toCOMPLEX(value):
+    def convert_toCOMPLEX(self, value):
         try:
             return complex(value)
         except ValueError:

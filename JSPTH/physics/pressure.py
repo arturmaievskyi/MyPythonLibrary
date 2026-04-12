@@ -1,12 +1,4 @@
-class FluidMaterial:
-    def __init__(self, name, density, dynamic_viscosity):
-        self.name = name
-        self.density = density
-        self.mu = dynamic_viscosity
 
-    def get_kinematic_viscosity(self):
-        return self.mu / self.density
-    
 
 
 class Preasure:
@@ -52,4 +44,20 @@ class Fluids(Preasure):
     def calculate_reynolds(fluid, velocity, diameter):
         return (fluid.density * velocity * diameter) / fluid.mu
     
-    
+class IdealGas:
+    R = 8.31446  # Universal Gas Constant
+
+    def __init__(self, n=None, p=None, v=None, t=None):
+        self.n = n # moles
+        self.p = p # pressure (Pa)
+        self.v = v # volume (m^3)
+        self.t = t # temperature (K)
+
+    def solve_for_pressure(self):
+        # P = nRT / V
+        return (self.n * self.R * self.t) / self.v
+
+    def solve_for_volume(self):
+        # V = nRT / P
+        return (self.n * self.R * self.t) / self.p
+

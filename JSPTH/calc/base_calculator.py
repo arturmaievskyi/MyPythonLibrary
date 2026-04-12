@@ -3,29 +3,32 @@ import math
 
 class BaseCalculator:
 
-    def add(a, b):
+    def __init__(self):
+        pass
+
+    def add(self, a, b):
         return a + b
     
-    def subtract(a, b):
+    def subtract(self, a, b):
         return a - b
     
-    def multiply(a, b):
+    def multiply(self, a, b):
         return a * b
     
-    def divide(a, b):
+    def divide(self, a, b):
         if b == 0:
             raise ValueError("Cannot divide by zero.")
         return a / b  
     
-    def power(a, b):
+    def power(self, a, b):
         return a ** b
     
-    def sqrt(a):
+    def sqrt(self, a):
         if a < 0:
             raise ValueError("Cannot take square root of negative number.")
         return a ** 0.5
     
-    def factorial(n):
+    def factorial(self, n):
         if n < 0:
             raise ValueError("Cannot take factorial of negative number.")
         if n == 0 or n == 1:

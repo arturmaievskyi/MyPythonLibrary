@@ -1,15 +1,28 @@
 
 
 class EnergyCalculator:
+    GRAVITY = 9.81
+
+    def __init__(self, mass, height, velocity):
+        self.mass = mass
+        self.height = height
+        self.velocity = velocity
+
     def calculate_kinetic_energy(self, mass, velocity):
         return 0.5 * mass * velocity ** 2
 
     def calculate_potential_energy(self, mass, height, gravity=9.81):
         return mass * gravity * height
     
-    def calculate_total_energy(self, mass, velocity, height, gravity=9.81):
+    def calculate_gravitational_potential_energy(self, mass, height):
+        return mass * self.GRAVITY * height
+    
+    def elastic_potential_energy(self, spring_constant, displacement):
+        return 0.5 * spring_constant * displacement ** 2
+
+    def calculate_total_energy(self, mass, height, velocity):
         kinetic_energy = self.calculate_kinetic_energy(mass, velocity)
-        potential_energy = self.calculate_potential_energy(mass, height, gravity)
+        potential_energy = self.calculate_potential_energy(mass, height, self.GRAVITY)
         return kinetic_energy + potential_energy
     
     def energy_conversion(self, energy, from_unit, to_unit):

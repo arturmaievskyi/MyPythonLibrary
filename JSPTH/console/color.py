@@ -16,6 +16,7 @@ class Color:
     ORANGE = "\033[33m"
     PURPLE = "\033[35m"
     PINK = "\033[35m"
+    HOT_PINK = "\033[35m"
     
 
     @staticmethod

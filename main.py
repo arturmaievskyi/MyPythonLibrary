@@ -1,6 +1,9 @@
-from JSPTH import console
-from JSPTH import calc
+from JSPTH import Console
+from JSPTH import Calc
 
-console.log("JSPTH Library Initialized")
-a = calc.basic_calculator.add(5, 3)
-console.log(f"5 + 3 = {a}")
+console = Console.console.Console()
+calc = Calc.BaseCalculator()
+
+result = calc.add(5, 3)
+console.print(f"The result of adding 5 and 3 is: {result}")
+
