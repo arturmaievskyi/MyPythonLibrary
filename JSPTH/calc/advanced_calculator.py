@@ -5,6 +5,7 @@ import base64
 class AdvancedCalculator:
     def modulo(a, b):
         return a % b
+    
     def floor_divide(a, b):
         if b == 0:
             raise ValueError("Cannot divide by zero.")
@@ -304,3 +305,13 @@ class AdvancedCalculator:
         c = math.sqrt(a**2 + b**2)
         return (a, b, c)
 
+    def nth_root(a, n):
+        if a < 0 and n % 2 == 0:
+            raise ValueError("Cannot take even root of negative number.")
+        return a ** (1/n)
+    
+    def roots_of_unity(n):
+        if n <= 0:
+            raise ValueError("n must be a positive integer.")
+        return [math.cos(2 * math.pi * k / n) + 1j * math.sin(2 * math.pi * k / n) for k in range(n)]
+    

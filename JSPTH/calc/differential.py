@@ -1,0 +1,2 @@
+class Differential:
+    pass
