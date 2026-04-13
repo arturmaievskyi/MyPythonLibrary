@@ -112,3 +112,30 @@ class Trigonometry:
                 return (b * math.sin(math.radians(B))) / math.sin(math.radians(C))
         else:
             raise ValueError("Insufficient information to apply the law of sines.")
+
+    def law_of_cosines(self, a, b, c, A, B, C):
+        if A is not None and a is not None:
+            if B is not None and b is None:
+                return math.sqrt(a**2 + c**2 - 2*a*c*math.cos(math.radians(A)))
+            elif C is not None and c is None:
+                return math.sqrt(a**2 + b**2 - 2*a*b*math.cos(math.radians(A)))
+        elif B is not None and b is not None:
+            if A is not None and a is None:
+                return math.sqrt(b**2 + c**2 - 2*b*c*math.cos(math.radians(B)))
+            elif C is not None and c is None:
+                return math.sqrt(a**2 + b**2 - 2*a*b*math.cos(math.radians(B)))
+        elif C is not None and c is not None:
+            if A is not None and a is None:
+                return math.sqrt(b**2 + c**2 - 2*b*c*math.cos(math.radians(C)))
+            elif B is not None and b is None:
+                return math.sqrt(a**2 + c**2 - 2*a*c*math.cos(math.radians(C)))
+        else:
+            raise ValueError("Insufficient information to apply the law of cosines.")
+        
+    def law_of_tangents(self, a, b, A, B):
+        if A is not None and a is not None and B is not None and b is not None:
+            return (a - b) / (a + b) == math.tan(math.radians((A - B) / 2)) / math.tan(math.radians((A + B) / 2))
+        else:
+            raise ValueError("Insufficient information to apply the law of tangents.")
+        
+    
