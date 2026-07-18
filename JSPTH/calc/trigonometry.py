@@ -137,5 +137,5 @@ class Trigonometry:
             return (a - b) / (a + b) == math.tan(math.radians((A - B) / 2)) / math.tan(math.radians((A + B) / 2))
         else:
             raise ValueError("Insufficient information to apply the law of tangents.")
-        
-    
+
+

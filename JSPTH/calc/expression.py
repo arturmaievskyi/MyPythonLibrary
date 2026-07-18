@@ -20,14 +20,14 @@ class Expression:
         return f"Expression('{self.expression}')"
 
 
-class cubicExpression(Expression):
+class CubicExpression(Expression):
     def __init__(self, a: float, b: float, c: float, d: float):
         super().__init__(f"{a}*x**3 + {b}*x**2 + {c}*x + {d}")
 
     def evaluate(self, x: float) -> float:
         return super().evaluate({'x': x})
-    
-class quadraticExpression(Expression):
+
+class QuadraticExpression():
     def __init__(self, a: float, b: float, c: float):
         a = a if a != 0 else 1
         b = b if b != 0 else 1
@@ -40,3 +40,4 @@ class quadraticExpression(Expression):
         root1 = (-self.b + math.sqrt(descriminant)) / (2*self.a)
         root2 = (-self.b - math.sqrt(descriminant)) / (2*self.a)
         return root1, root2
+    

@@ -2,14 +2,14 @@ from JSPTH import Console
 from JSPTH import Physics
 
 # creating variables for physics calculations
-mass = 10  
-velocity = 5
-height = 20
-time = 4
-work = 1000
-force = 200
-distance = 50
-power = 250
+mass = 10       # mass in kilograms
+velocity = 5    # velocity in meters per second
+height = 20     # height in meters
+time = 4        # time in seconds
+work = 1000     # work in joules
+force = 200     # force in newtons
+distance = 50   # distance in meters
+power = 250     # power in watts
 
 # Initializing the EnergyCalculator with the given parameters
 physics_energy = Physics.EnergyCalculator(mass, height, velocity)

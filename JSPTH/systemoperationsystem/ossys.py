@@ -21,5 +21,3 @@ class OSSys:
         if os.name == 'nt':  # For Windows
             os.system('cmd cls')
             os.system('cls')
-
-    

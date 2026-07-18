@@ -1038,38 +1038,36 @@ class YieldConvertor:
         else:
             raise ValueError(f"Conversion from {from_unit} to {to_unit} is not supported.")
 
-class MassConvertor:
+
     """
-    A class to convert between different mass units.
+    A class to convert between different cubic units.
     """
 
     conversion_factors = {
-        ('grams', 'kilograms'): 0.001,
-        ('kilograms', 'grams'): 1000,
-        ('pounds', 'kilograms'): 0.453592,
-        ('kilograms', 'pounds'): 2.20462,
-        ('ounces', 'grams'): 28.3495,
-        ('grams', 'ounces'): 1 / 28.3495,
-        ('tons', 'kilograms'): 907.185,
-        ('kilograms', 'tons'): 1 / 907.185,
-        ('atomic_mass_units', 'grams'): 1.66053906660e-24,
-        ('grams', 'atomic_mass_units'): 6.02214076e23,
+        ('cubic_meters', 'cubic_centimeters'): 1e6,
+        ('cubic_centimeters', 'cubic_meters'): 1e-6,
+        ('cubic_inches', 'cubic_centimeters'): 16.3871,
+        ('cubic_centimeters', 'cubic_inches'): 1 / 16.3871,
+        ('cubic_feet', 'cubic_meters'): 0.0283168,
+        ('cubic_meters', 'cubic_feet'): 1 / 0.0283168,
     }
 
     @classmethod
     def convert(cls, value, from_unit, to_unit):
         """
-        Convert a value from one mass unit to another.
+        Convert a value from one cubic unit to another.
 
         :param value: The numerical value to convert.
         :param from_unit: The unit of the input value.
         :param to_unit: The unit to convert the value to.
         :return: The converted value.
-        """
+        :raises ValueError: If the conversion is not supported.
+        """        
         key = (from_unit, to_unit)
         if key in cls.conversion_factors:
             factor = cls.conversion_factors[key]
             return value * factor
         else:
             raise ValueError(f"Conversion from {from_unit} to {to_unit} is not supported.")
+
 

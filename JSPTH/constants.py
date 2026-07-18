@@ -1,3 +1,4 @@
+import math
 class Constants:
     SPEED_OF_LIGHT_MS = 299792458  # m/s
     GRAVITATIONAL_CONSTANT = 6.67430e-11  # m^3 kg^-1 s^-2
@@ -5,7 +6,7 @@ class Constants:
     BOLTZMANN_CONSTANT = 1.380649e-23  # J/K
     AVOGADRO_CONSTANT = 6.02214076e23  # mol^-1
     GAS_CONSTANT = 8.314462618  # J/(mol K)
-    PI = 3.141592653589793
+    PI = math.pi
     EULER_NUMBER = 2.718281828459045
     GRAVITY = 9.81  # m/s^2
     SPEED_OF_LIGHT_KMH = 300_000

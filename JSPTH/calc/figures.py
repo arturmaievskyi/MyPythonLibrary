@@ -1,4 +1,5 @@
 import math
+
 class areaOfFigures:
     """Class to calculate area of different geometric figures."""
     
@@ -21,6 +22,13 @@ class areaOfFigures:
     def square(side):
         """Calculate area of a square given its side length."""
         return side ** 2
+
+    @staticmethod
+    def regular_polygon(sides, length):
+        """Calculate area of a regular polygon given the number of sides and length of each side."""
+        n = sides
+        s = length
+        return (n * s ** 2) / (4 * math.tan(math.pi / n))
 
 class volumeOfFigures:
     """Class to calculate volume of different geometric figures."""
@@ -45,6 +53,13 @@ class volumeOfFigures:
     def cube(side):
         """Calculate volume of a cube given its side length."""
         return side ** 3
+
+    @staticmethod
+    def regular_polygon(sides, length):
+        """Calculate volume of a regular polyron given the number of sides and length of each side."""
+        n = sides
+        s = length
+        return (n * s ** 3) / (6 * math.tan(math.pi / n))
     
 class areaOf3DFigures:
     """Class to calculate surface area of different 3D geometric figures."""
@@ -68,7 +83,14 @@ class areaOf3DFigures:
     def cube(side):
         """Calculate surface area of a cube given its side length."""
         return 6 * side ** 2
-
+    
+    @staticmethod
+    def regular_polyron(sides, length):
+        """Calculate surface area of a regular polyron given the number of sides and length of each side."""
+        n = sides
+        s = length
+        return (n * s ** 2) / (4 * math.tan(math.pi / n)) + (n * s * math.sqrt((s ** 2) - ((s / (2 * math.tan(math.pi / n))) ** 2))) / 2
+    
 class perimeterOfFigures:
     """Class to calculate perimeter of different geometric figures."""
     
@@ -96,7 +118,27 @@ class perimeterOfFigures:
     def regular_polygon(sides, length):
         """Calculate perimeter of a regular polygon given the number of sides and length of each side."""
         return sides * length
-    
+
+    @staticmethod
+    def parallelogram(base, side):
+        """Calculate perimeter of a parallelogram given its base and side lengths."""
+        return 2 * (base + side)
+
+    @staticmethod
+    def trapezoid(base1, base2, side1, side2):
+        """Calculate perimeter of a trapezoid given its two bases and two sides."""
+        return base1 + base2 + side1 + side2
+
+    @staticmethod
+    def rhombus(side):
+        """Calculate perimeter of a rhombus given its side length."""
+        return 4 * side
+
+    @staticmethod
+    def regular_polygon(sides, length):
+        """Calculate perimeter of a regular polygon given the number of sides and length of each side."""
+        return sides * length
+
 class perimeterOf3DFigures:
     """Class to calculate perimeter of different 3D geometric figures."""
     
@@ -146,6 +188,23 @@ class perimeterOf3DFigures:
         """Calculate perimeter of a regular n-gon prism given the number of sides and height."""
         perimeter_base = sides * (2 * math.pi * (height / (2 * math.pi)))
         return 2 * perimeter_base + sides * height
+
+    @staticmethod
+    def ngon_pyramid(sides, height):
+        """Calculate perimeter of a regular n-gon pyramid given the number of sides and height."""
+        perimeter_base = sides * (2 * math.pi * (height / (2 * math.pi)))
+        slant_height = math.sqrt((height ** 2) + ((1 / (2 * math.tan(math.pi / sides))) ** 2))
+        return perimeter_base + sides * slant_height
+    
+    @staticmethod
+    def sphere_cap(radius, height):
+        """Calculate perimeter of a spherical cap given its radius and height (circumference of base)."""
+        return 2 * math.pi * math.sqrt(radius ** 2 - (radius - height) ** 2)
+    
+    @staticmethod
+    def regular_polygon(sides, length):
+        """Calculate perimeter of a regular polygon given the number of sides and length of each side."""
+        return sides * length
 
 class diagonalOfFigures:
     """Class to calculate diagonal of different geometric figures."""
@@ -323,3 +382,64 @@ class volumeOf3DFigures:
     def sphere_cap(radius, height):
         """Calculate volume of a spherical cap given its radius and height."""
         return (1/3) * math.pi * height ** 2 * (3 * radius - height)
+
+class volumeOf4DFigures:
+    """Class to calculate volume of different 4D geometric figures."""
+    
+    @staticmethod
+    def hypersphere(radius):
+        """Calculate volume of a hypersphere given its radius."""
+        return (math.pi ** 2 / 2) * radius ** 4
+    
+    @staticmethod
+    def hypercube(side):
+        """Calculate volume of a hypercube given its side length."""
+        return side ** 4
+    
+    @staticmethod
+    def hyperrectangular_prism(length, width, height, depth):
+        """Calculate volume of a hyperrectangular prism given its length, width, height, and depth."""
+        return length * width * height * depth
+    
+    @staticmethod
+    def hyperpyramid(base_length, base_width, base_height, height):
+        """Calculate volume of a hyperpyramid given its base length, base width, base height, and height."""
+        return (1/4) * base_length * base_width * base_height * height
+    
+    @staticmethod
+    def hypersphere_cap(radius, height):
+        """Calculate volume of a hypersphere cap given its radius and height."""
+        return (math.pi ** 2 / 2) * height ** 4 * (1 - (height / radius) ** 4)
+    
+    @staticmethod
+    def regular_polygon(sides, length):
+        """Calculate area of a regular polygon given the number of sides and length of each side."""
+        n = sides
+        s = length
+        return (n * s ** 2) / (4 * math.tan(math.pi / n))
+
+class perimeterOf4DFigures:
+    @staticmethod
+    def perimeter_of_hypercube(side):
+        """Calculate perimeter of a hypercube given its side length."""
+        return 32 * side
+    
+    @staticmethod
+    def perimeter_of_hyperrectangular_prism(length, width, height, depth):
+        """Calculate perimeter of a hyperrectangular prism given its length, width, height, and depth."""
+        return 8 * (length + width + height + depth)
+    
+    @staticmethod
+    def perimeter_of_hyperpyramid(base_length, base_width, base_height, height):
+        """Calculate perimeter of a hyperpyramid given its base length, base width, base height, and height."""
+        return 4 * (base_length + base_width + base_height) + 4 * height
+
+    def perimeter_of_hypersphere(radius):
+        """Calculate perimeter of a hypersphere given its radius (circumference of great circle)."""
+        return 2 * math.pi * radius
+    
+    def perimeter_of_hypersphere_cap(radius, height):
+        """Calculate perimeter of a hypersphere cap given its radius and height (circumference of base)."""
+        return 2 * math.pi * math.sqrt(radius ** 2 - (radius - height) ** 2)
+    
+    

@@ -40,5 +40,33 @@ class BaseCalculator:
     
     def percentage(a, b):
         return (a / b) * 100
+
+    def multiply_advenced(self, a, b):
+        if a == 0 or b == 0:
+            return 0
+        elif a == 1:
+            return b
+        
+        elif b == 1:
+            return a
+        
+        elif a < 0 and b < 0:
+            a = abs(a)
+            b = abs(b)
+                
+            for i in range(a, b):
+                a += a
+            return a
     
     
+        elif a<1:
+            a = 1/a
+            for i in range(1, b):
+                a += a
+            return 1/a
+    
+    def is_Odd(self, n):
+        return n % 2 != 0
+    
+    def is_Even(self, n):
+        return n % 2 == 0

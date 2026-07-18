@@ -1,21 +1,11 @@
 
 
-
-class Preasure:
-    def __init__(self, height, gravity=9.81, ro=1000, force=None, area=None, volume=None):
-        self.height = height
-        self.gravity = gravity
-        self.ro = ro
-        self.force = force
-        self.area = area
-        self.volume = volume
-
-class Mechanic(Preasure): 
+class Mechanic(): 
     def calculate_mechanic(force, area):
         return force / area if area != 0 else 0
     
 
-class Fluids(Preasure):
+class Fluids():
     def hydrostatic_pressure(ro, gravity, height):
         return ro * gravity * height
     
@@ -47,17 +37,14 @@ class Fluids(Preasure):
 class IdealGas:
     R = 8.31446  # Universal Gas Constant
 
-    def __init__(self, n=None, p=None, v=None, t=None):
-        self.n = n # moles
-        self.p = p # pressure (Pa)
-        self.v = v # volume (m^3)
-        self.t = t # temperature (K)
+    def __init__():
+        pass
 
-    def solve_for_pressure(self):
+    def solve_for_pressure(self, n, t, v):
         # P = nRT / V
-        return (self.n * self.R * self.t) / self.v
+        return (n * self.R * t) / v
 
-    def solve_for_volume(self):
+    def solve_for_volume(self, n, t, p):
         # V = nRT / P
-        return (self.n * self.R * self.t) / self.p
+        return (n * self.R * t) / p
 

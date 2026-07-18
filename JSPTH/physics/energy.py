@@ -3,10 +3,8 @@
 class EnergyCalculator:
     GRAVITY = 9.81
 
-    def __init__(self, mass, height, velocity):
-        self.mass = mass
-        self.height = height
-        self.velocity = velocity
+    def __init__(self):
+        pass
 
     def calculate_kinetic_energy(self, mass, velocity):
         return 0.5 * mass * velocity ** 2
