@@ -1361,10 +1361,6 @@ class NumericalDerivatives:
             result += func(midpoint)
         return result * h
 
-from math import *
-import sys
-
-
 class Series:
     """
     Comprehensive class for series analysis in calculus.
