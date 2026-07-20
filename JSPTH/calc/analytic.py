@@ -3118,7 +3118,9 @@ class Extrema:
                     abs(right_limit - func_value) < tolerance)
         except:
             return False
-    
+
+class Interval:
+    pass
 
 class Analytic:
     """
@@ -3202,3 +3204,4 @@ class Analytic:
             except:
                 continue
         return values
+    
