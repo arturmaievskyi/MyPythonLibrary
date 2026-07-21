@@ -1070,4 +1070,119 @@ class YieldConvertor:
         else:
             raise ValueError(f"Conversion from {from_unit} to {to_unit} is not supported.")
 
+class MolarMassConverter:
+    """
+    A class to convert between different molar mass units.
+    """
 
+    conversion_factors = {
+        ('grams_per_mole', 'kilograms_per_mole'): 0.001,
+        ('kilograms_per_mole', 'grams_per_mole'): 1000,
+        ('grams_per_mole', 'pounds_per_mole'): 0.00220462,
+        ('pounds_per_mole', 'grams_per_mole'): 1 / 0.00220462,
+    }
+
+    @classmethod
+    def convert(cls, value, from_unit, to_unit):
+        """
+        Convert a value from one molar mass unit to another.
+
+        :param value: The numerical value to convert.
+        :param from_unit: The unit of the input value.
+        :param to_unit: The unit to convert the value to.
+        :return: The converted value.
+        :raises ValueError: If the conversion is not supported.
+        """        
+        key = (from_unit, to_unit)
+        if key in cls.conversion_factors:
+            factor = cls.conversion_factors[key]
+            return value * factor
+        else:
+            raise ValueError(f"Conversion from {from_unit} to {to_unit} is not supported.")
+        
+class ConcentrationConverter:
+    """
+    A class to convert between different concentration units.
+    """
+
+    conversion_factors = {
+        ('moles_per_liter', 'millimoles_per_liter'): 1000,
+        ('millimoles_per_liter', 'moles_per_liter'): 1 / 1000,
+        ('grams_per_liter', 'milligrams_per_liter'): 1000,
+        ('milligrams_per_liter', 'grams_per_liter'): 1 / 1000,
+    }
+
+    @classmethod
+    def convert(cls, value, from_unit, to_unit):
+        """
+        Convert a value from one concentration unit to another.
+
+        :param value: The numerical value to convert.
+        :param from_unit: The unit of the input value.
+        :param to_unit: The unit to convert the value to.
+        :return: The converted value.
+        :raises ValueError: If the conversion is not supported.
+        """        
+        key = (from_unit, to_unit)
+        if key in cls.conversion_factors:
+            factor = cls.conversion_factors[key]
+            return value * factor
+        else:
+            raise ValueError(f"Conversion from {from_unit} to {to_unit} is not supported.")
+
+class LuminanceConverter:
+    """
+    A class to convert between different luminance units.
+    """
+
+    conversion_factors = {
+        ('candela_per_square_meter', 'foot_lambert'): 0.2919,
+        ('foot_lambert', 'candela_per_square_meter'): 1 / 0.2919,
+    }
+
+    @classmethod
+    def convert(cls, value, from_unit, to_unit):
+        """
+        Convert a value from one luminance unit to another.
+
+        :param value: The numerical value to convert.
+        :param from_unit: The unit of the input value.
+        :param to_unit: The unit to convert the value to.
+        :return: The converted value.
+        :raises ValueError: If the conversion is not supported.
+        """        
+        key = (from_unit, to_unit)
+        if key in cls.conversion_factors:
+            factor = cls.conversion_factors[key]
+            return value * factor
+        else:
+            raise ValueError(f"Conversion from {from_unit} to {to_unit} is not supported.")
+        
+class IlluminanceConverter:
+    """
+    A class to convert between different illuminance units.
+    """
+
+    conversion_factors = {
+        ('lux', 'foot_candle'): 0.092903,
+        ('foot_candle', 'lux'): 1 / 0.092903,
+    }
+
+    @classmethod
+    def convert(cls, value, from_unit, to_unit):
+        """
+        Convert a value from one illuminance unit to another.
+
+        :param value: The numerical value to convert.
+        :param from_unit: The unit of the input value.
+        :param to_unit: The unit to convert the value to.
+        :return: The converted value.
+        :raises ValueError: If the conversion is not supported.
+        """        
+        key = (from_unit, to_unit)
+        if key in cls.conversion_factors:
+            factor = cls.conversion_factors[key]
+            return value * factor
+        else:
+            raise ValueError(f"Conversion from {from_unit} to {to_unit} is not supported.")
+        
