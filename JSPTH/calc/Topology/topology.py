@@ -404,38 +404,3 @@ class Other_functions:
                 max_dist = min_dist
         
         return max_dist
-
-class ProductTopology(Topology):
-    """
-    Product topology on the Cartesian product of topological spaces.
-    """
-
-    def __init__(self, topology1, topology2):
-        """
-        Initialize product topology.
-        
-        :param topology1: First topological space
-        :param topology2: Second topological space
-        """
-        # Base set is Cartesian product
-        self.base_set = set()
-        for p1 in topology1.base_set:
-            for p2 in topology2.base_set:
-                self.base_set.add((p1, p2))
-        
-        # Open sets in product topology
-        self.open_sets = []
-        for open_set1 in topology1.open_sets:
-            for open_set2 in topology2.open_sets:
-                product_open = set()
-                for p1 in open_set1:
-                    for p2 in open_set2:
-                        product_open.add((p1, p2))
-                self.open_sets.append(product_open)
-        
-        self.closed_sets = []
-        self._compute_closed_sets()
-
-
-# Utility functions for topology operations
-

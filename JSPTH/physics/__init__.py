@@ -1,5 +1,5 @@
 from .another import FluidMaterial
-from .energy import EnergyCalculator
+from .energy.energy import EnergyCalculator
 from .power import WorkPowerCalculator
 from .electrics import Electrics
 from .pressure import *
