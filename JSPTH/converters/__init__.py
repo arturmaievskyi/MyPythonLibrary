@@ -38,5 +38,10 @@ __init__ = {
     "WavelengthConvertor": WavelengthConvertor,
     "ElectricChargeConvertor": ElectricChargeConvertor,
     "YieldConvertor": YieldConvertor,
-    "MassConvertor": MassConvertor,
+    "MassConvertor": MassConverter,
+    "MolarMassConverter": MolarMassConverter,
+    "ConcentrationConverter": ConcentrationConverter,
+    "LuminanceConverter": LuminanceConverter,
+    "IlluminanceConverter": IlluminanceConverter,
+
 }

@@ -1186,3 +1186,34 @@ class IlluminanceConverter:
         else:
             raise ValueError(f"Conversion from {from_unit} to {to_unit} is not supported.")
         
+class MassConverter:
+    """
+    A class to convert between different mass units.
+    """
+
+    conversion_factors = {
+        ('grams', 'kilograms'): 0.001,
+        ('kilograms', 'grams'): 1000,
+        ('pounds', 'kilograms'): 0.453592,
+        ('kilograms', 'pounds'): 2.20462,
+        ('ounces', 'grams'): 28.3495,
+        ('grams', 'ounces'): 1 / 28.3495,
+    }
+
+    @classmethod
+    def convert(cls, value, from_unit, to_unit):
+        """
+        Convert a value from one mass unit to another.
+
+        :param value: The numerical value to convert.
+        :param from_unit: The unit of the input value.
+        :param to_unit: The unit to convert the value to.
+        :return: The converted value.
+        :raises ValueError: If the conversion is not supported.
+        """        
+        key = (from_unit, to_unit)
+        if key in cls.conversion_factors:
+            factor = cls.conversion_factors[key]
+            return value * factor
+        else:
+            raise ValueError(f"Conversion from {from_unit} to {to_unit} is not supported.")

@@ -1,15 +1,13 @@
 from .base_calculator import BaseCalculator
 from .advanced_calculator import AdvancedCalculator
 from .expression import Expression
-from .analytic import Limits, NumericalDerivatives, Integrals, Series
-from .topology import Topology, MetricSpace, EuclideanSpace, DiscreteTopology
+from .analitics import __init__ as analitics_init
+from .topology import __init__ as topology_init
 
-__init__ = {
-    "BaseCalculator": BaseCalculator,
-    "AdvancedCalculator": AdvancedCalculator,
-    "Expression": Expression,
-    "Limits": Limits,
-    "NumericalDerivatives": NumericalDerivatives,
-    "Integrals": Integrals,
-    "Series": Series
+__init__={
+    "base_calculator": BaseCalculator,
+    "advanced_calculator": AdvancedCalculator,
+    "expression": Expression,
+    "analitics": analitics_init,
+    "topology": topology_init
 }
