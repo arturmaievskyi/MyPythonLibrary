@@ -405,29 +405,6 @@ class Other_functions:
         
         return max_dist
 
-class SubspaceTopology(Topology):
-    """
-    Induced subspace topology on a subset of a topological space.
-    """
-
-    def __init__(self, parent_topology, subspace):
-        """
-        Initialize subspace topology.
-        
-        :param parent_topology: The parent topological space
-        :param subspace: The subset with induced topology
-        """
-        self.parent_topology = parent_topology
-        self.base_set = set(subspace)
-        # Subspace topology: intersections of open sets in parent with subspace
-        self.open_sets = []
-        for open_set in parent_topology.open_sets:
-            induced_open = open_set & self.base_set
-            self.open_sets.append(induced_open)
-        self.closed_sets = []
-        self._compute_closed_sets()
-
-
 class ProductTopology(Topology):
     """
     Product topology on the Cartesian product of topological spaces.

@@ -9,7 +9,7 @@ A subspace topology is induced on a subset A of a topological space (X, τ) by:
 That is, the open sets in the subspace are exactly the intersections of open sets
 of the parent space with the subset.
 """
-
+from .topology_imports import *
 
 class SubspaceTopology:
     """
