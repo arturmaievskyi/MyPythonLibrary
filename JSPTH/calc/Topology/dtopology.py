@@ -1,7 +1,4 @@
-import math
-from itertools import combinations, permutations
-from collections import defaultdict, deque
-from .topology import Topology
+from .topology_imports import *
 
 class DiscreteTopology(Topology):
     """

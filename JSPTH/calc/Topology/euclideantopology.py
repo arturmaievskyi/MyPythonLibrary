@@ -1,8 +1,4 @@
-
-import math
-from itertools import combinations, permutations
-from collections import defaultdict, deque
-
+from .topology_imports import *
 
 class EuclideanTopology:
     """
