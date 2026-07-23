@@ -4,11 +4,14 @@ from .converters import __init__ as converters_init
 from .physics import __init__ as physics_init
 from .systemoperationsystem import __init__ as system_ops_init
 from .file_helper import FileHelper
+from .general import GeneralUtility
 
 __init__ = {
     "calc": calc_init,
     "console": console_init,
     "converters": converters_init,
     "physics": physics_init,
-    "systemoperationsystem": system_ops_init
+    "systemoperationsystem": system_ops_init,
+    "file_helper": FileHelper,
+    "general": GeneralUtility
 }
