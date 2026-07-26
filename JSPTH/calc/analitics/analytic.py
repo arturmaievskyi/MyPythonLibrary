@@ -57,11 +57,7 @@ class Analytic:
         limit_zero = sequence[-1] < 1e-10
         
         return decreasing and limit_zero
-    
-    # ==================== EXTREMA AND CRITICAL POINTS ====================
-    
-    
-    # ==================== UTILITY FUNCTIONS ====================
+
     
     @staticmethod
     def verify_limit_behavior(func, x_val, num_points=100):

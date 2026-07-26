@@ -1,4 +1,3 @@
-# JSPTH/physics/kinetic_energy.py
 
 from .energy_importer import *
 
