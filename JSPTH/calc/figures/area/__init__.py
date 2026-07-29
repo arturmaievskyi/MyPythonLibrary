@@ -1,4 +1,4 @@
-from .figures import areaOfFigures
+from ..figures_2d import areaOfFigures
 from .threedfigures import areaOf3DFigures
 from .fourdfigures import areaOf4DFigures
 

@@ -1,8 +1,4 @@
-from math import *
-from advanced_calculator import *
-import numpy as np
-import sys
-
+from .a_imports import *
 
 class Limits:
     """
