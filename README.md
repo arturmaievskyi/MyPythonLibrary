@@ -21,4 +21,4 @@ it is wrong
 
 2. Docs
 
-there is not docs for all the code.
+there are not docs for all the code.
