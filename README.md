@@ -1,7 +1,7 @@
 # JSPTH
 
 ## ATTETION   
-1. Examples
+1. Examples \n
 Some examples imports are not "real". Please, write like this:
 ``` python
 
