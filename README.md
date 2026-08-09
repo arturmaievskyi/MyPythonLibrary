@@ -1,8 +1,13 @@
 # JSPTH
 
 ## ATTETION   
-1. Examples \n
+1. Examples
+
+
 Some examples imports are not "real". Please, write like this:
+
+
+
 ``` python
 
 from JSPTH.module.class import ClassName
